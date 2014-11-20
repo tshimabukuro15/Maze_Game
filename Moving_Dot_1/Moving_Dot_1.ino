@@ -6,7 +6,7 @@
    
 Moving_Dot
    
-   
+   // Download Guide, Enemies, obstacles, weapons, win/ lose, damage, music,
  
  Version 1.25 - 12/2/2008
  Copyright (c) 2008 Windell H. Oskay.  All right reserved.
@@ -50,6 +50,7 @@ void setup()                    // run once, when the sketch starts
 void loop()                   // run over and over again
 {
   CheckButtonsPress();
+
   if (Button_Right)
   {
     if(xcoord < 7)
@@ -59,18 +60,26 @@ void loop()                   // run over and over again
   if (Button_Left)
   {
     if(xcoord > 0)
+    {
     xcoord = xcoord -1;
   }
   
   if (Button_Up)
   {
-    if (ycoord < 8)
+    if (ycoord < 7)
     ycoord = ycoord + 1;
   }
   if (Button_Down)
+  {
+    if (ycoord > 0)
+    ycoord = ycoord -1; 
+  }  
+ 
   DrawPx(xcoord,ycoord,Red); //Draws Dot
+
+ {
   DisplaySlate();
   delay(1);
  ClearSlate();
-}
+ }
 
