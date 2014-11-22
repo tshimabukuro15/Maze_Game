@@ -60,7 +60,7 @@ void loop()                   // run over and over again
   if (Button_Left)
   {
     if(xcoord > 0)
-    {
+    
     xcoord = xcoord -1;
   }
   
@@ -77,7 +77,7 @@ void loop()                   // run over and over again
  
   DrawPx(xcoord,ycoord,Red); //Draws Dot
 
- {
+  
   DisplaySlate();
   delay(1);
  ClearSlate();
